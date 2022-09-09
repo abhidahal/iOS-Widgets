@@ -4,11 +4,12 @@
 const url = `https://meme-api.herokuapp.com/gimme`;
 const req = new Request(url);
 const res = await req.loadJSON();
+const source = res.postLink;
 const memeUrl = res.url;
 const i = new Request(memeUrl);
 const img = await i.loadImage();
-
-let widget = createWidget(img);
+const widget = createWidget(img);
+widget.url = source;
 if (config.runsInWidget) {
   Script.setWidget(widget);
   Script.complete();
@@ -17,9 +18,13 @@ if (config.runsInWidget) {
 }
 
 function createWidget(img) {
-  let w = new ListWidget();
-  w.backgroundColor = new Color("#1A1A1A");
+  const w = new ListWidget();
   w.addSpacer(1);
+  const headerStack = w.addStack();
+  headerStack.setPadding(0, 30, 10, 0);
+  const headerText = headerStack.addText(res.title);
+  headerText.font = Font.mediumSystemFont(16);
+  headerText.centerAlignText();
   let image = w.addImage(img);
   image.centerAlignImage();
   w.addSpacer(1);
