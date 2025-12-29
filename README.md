@@ -1,4 +1,4 @@
-**<h1 align="left" >iOS-Widgets</h1>**
+- **<h1 align="left" >iOS-Widgets</h1>**
 
 <h2 align="left">iOS widgets using Scriptable and JavaScript.</h2>
 
@@ -6,7 +6,7 @@
 
 <h2 align="left">Languages & tools used:</h2>
 
-[![My Skills](https://skills.thijs.gg/icons?i=js&theme=dark)](https://skills.thijs.gg)
+[![My Skills](https://skillicons.dev/icons?i=javascript&theme=dark&perline=6)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 <img src="https://scriptable.app/assets/appicon.png"  height="48" />
 
 <h2 align="left">Widgets</h2>
